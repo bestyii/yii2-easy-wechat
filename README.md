@@ -1,19 +1,15 @@
 # yii2-easy-wechat
 
-> 基于最新的 overtrue/wechat 4.x
-
-由于 [max-wen/yii2-easy-wechat](https://github.com/max-wen/yii2-easy-wechat) 不支持 EasyWechat 4.x 所以建立该项目
-
 WeChat SDK for Yii2 , 基于 [overtrue/wechat](https://github.com/overtrue/wechat).     
 这个扩展可以简单的用yii2的方式去调用EasyWechat:   `Yii::$app->wechat`.   
 
-[![Latest Stable Version](https://poser.pugx.org/jianyan74/yii2-easy-wechat/v/stable)](https://packagist.org/packages/jianyan74/yii2-easy-wechat)
-[![Total Downloads](https://poser.pugx.org/jianyan74/yii2-easy-wechat/downloads)](https://packagist.org/packages/jianyan74/yii2-easy-wechat)
-[![License](https://poser.pugx.org/jianyan74/yii2-easy-wechat/license)](https://packagist.org/packages/jianyan74/yii2-easy-wechat)
+[![Latest Stable Version](https://poser.pugx.org/bestyii/yii2-easy-wechat/v/stable)](https://packagist.org/packages/bestyii/yii2-easy-wechat)
+[![Total Downloads](https://poser.pugx.org/bestyii/yii2-easy-wechat/downloads)](https://packagist.org/packages/bestyii/yii2-easy-wechat)
+[![License](https://poser.pugx.org/bestyii/yii2-easy-wechat/license)](https://packagist.org/packages/bestyii/yii2-easy-wechat)
 
 ## 安装
 ```
-composer require jianyan74/yii2-easy-wechat
+composer require bestyii/yii2-easy-wechat
 ```
 
 ## 配置
@@ -25,7 +21,7 @@ composer require jianyan74/yii2-easy-wechat
 'components' => [
 	// ...
 	'wechat' => [
-		'class' => 'jianyan\easywechat\Wechat',
+		'class' => 'bestyii\easywechat\Wechat',
 		'userOptions' => [],  // 用户身份类参数
 		'sessionParam' => 'wechatUser', // 微信用户信息将存储在会话在这个密钥
 		'returnUrlParam' => '_wechatReturnUrl', // returnUrl 存储在会话中
@@ -186,7 +182,7 @@ use Yii;
 
 /**
  *
- * @property \jianyan\easywechat\Wechat $wechat 加入这一行即可实现编辑器智能提示.
+ * @property \bestyii\easywechat\Wechat $wechat 加入这一行即可实现编辑器智能提示.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
@@ -201,13 +197,8 @@ abstract class Application extends Module
 
  [EasyWeChat Docs](https://www.easywechat.com/docs/master).
  
- ### 实例
-
- [RageFrame](https://github.com/jianyan74/rageframe2)
-
 ### 问题反馈
 
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
-QQ群：[655084090](https://jq.qq.com/?_wv=1027&k=4BeVA2r)
-
+[BestYii.com](https://www.bestyii.com)

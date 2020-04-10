@@ -1,6 +1,6 @@
 <?php
 
-namespace jianyan\easywechat;
+namespace bestyii\easywechat;
 
 use Yii;
 use yii\base\Component;
@@ -9,7 +9,7 @@ use EasyWeChat\Factory;
 /**
  * Class Wechat
  *
- * @package jianyan\easywechat
+ * @package bestyii\easywechat
  *
  * @property \EasyWeChat\OfficialAccount\Application $app 微信SDK实例
  * @property \EasyWeChat\Payment\Application $payment 微信支付SDK实例

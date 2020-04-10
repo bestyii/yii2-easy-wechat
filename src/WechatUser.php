@@ -1,12 +1,12 @@
 <?php
 
-namespace jianyan\easywechat;
+namespace bestyii\easywechat;
 
 use yii\base\Component;
 
 /**
  * Class WechatUser
- * @package jianyan74\easywechat
+ * @package bestyii\easywechat
  */
 class WechatUser extends Component
 {
