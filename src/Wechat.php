@@ -217,16 +217,7 @@ class Wechat extends Component
             self::$_openPlatform = Factory::openPlatform(Yii::$app->params['wechatOpenPlatformConfig']);
             !empty($this->rebinds) && self::$_openPlatform = $this->rebind(self::$_openPlatform);
         }
-        $redis = new \Redis();
-        $redis->connect('127.0.0.1', 6379);
-        $redis->select(15);
-        if (class_exists(\Symfony\Component\Cache\Simple\RedisCache::class)) {
-            $cache = new  \Symfony\Component\Cache\Simple\RedisCache($redis);
-        } else {
-            $cache = new \Symfony\Component\Cache\Adapter\RedisAdapter($redis);
-        }
-        self::$_openPlatform->rebind('cache', $cache);
-
+       
         return self::$_openPlatform;
     }
 
@@ -256,16 +247,6 @@ class Wechat extends Component
             self::$_openWork = Factory::openWork(Yii::$app->params['wechatOpenWorkConfig']);
             !empty($this->rebinds) && self::$_openWork = $this->rebind(self::$_openWork);
         }
-
-        $redis = new \Redis();
-        $redis->connect('127.0.0.1', 6379);
-        $redis->select(15);
-        if (class_exists(\Symfony\Component\Cache\Simple\RedisCache::class)) {
-            $cache = new  \Symfony\Component\Cache\Simple\RedisCache($redis);
-        } else {
-            $cache = new \Symfony\Component\Cache\Adapter\RedisAdapter($redis);
-        }
-        self::$_openWork->rebind('cache', $cache);
 
         return self::$_openWork;
     }
